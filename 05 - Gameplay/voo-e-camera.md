@@ -25,6 +25,12 @@ tags: [sistema, voo, camera, controles]
 
 Ctrl ficou de fora de propósito: Ctrl+W fecha a aba.
 
+**Pausa e retomada** (`main.js`, `input.js`): o clique em "Clique para voar" só *pede* o
+pointer lock; o jogo despausa no `pointerlockchange`, quando o lock pega de fato. O
+Chrome recusa o relock por ~1 s depois de sair com Esc — o overlay continua e o próximo
+clique tenta de novo (ver [[pointer-lock-recusado-apos-esc]]). Trocar de janela limpa
+teclas **e** botões do mouse; Espaço só arma o pulo com o ponteiro travado.
+
 ## Como funciona (`flight.js`, testado)
 
 - **Duas fases**: `ground` (anda relativo ao yaw, sola a `FLIGHT.footDepth` do telhado) e
@@ -65,3 +71,4 @@ Ctrl ficou de fora de propósito: Ctrl+W fecha a aba.
 ## PRs
 
 - [[2026-09-28-pr-005-voo-e-camera]]
+- [[2026-09-28-pr-016-pausa-e-pointer-lock]] — despausar só com o lock confirmado

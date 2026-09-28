@@ -41,6 +41,10 @@ Um **compressor** no fim da cadeia impede que estrondo e explosão juntos estour
 
 - **`AudioContext` só nasce de gesto do usuário**: é criado no clique de "Clique para
   voar" (`audio.start()`), nunca no carregamento.
+- **Aba em segundo plano para o loop, não o som**: sem `audio.suspend()` na pausa, o
+  vento ficava tocando no último ganho em outra aba. A pausa (que trocar de aba sempre
+  dispara, porque solta o pointer lock) suspende o `AudioContext`; o clique de volta o
+  retoma.
 - **Verificar som sem ouvir**: `audio.probe()` mede o RMS da saída por um
   `AnalyserNode`. Medido em headless: parado 0,016 → 376 m/s 0,044; visão de calor
   0,007 → 0,062.
@@ -48,3 +52,4 @@ Um **compressor** no fim da cadeia impede que estrondo e explosão juntos estour
 ## PRs
 
 - [[2026-09-28-pr-012-audio]]
+- [[2026-09-28-pr-016-pausa-e-pointer-lock]] — som suspenso na pausa
