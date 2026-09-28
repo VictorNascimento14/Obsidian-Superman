@@ -39,12 +39,16 @@ tags: [sistema, hud, ui]
 
 ## No espaço
 
-Acima de 20 km: altitude até a superfície da Terra em km, velocidade em km/s (e quantas vezes
-a luz, que em escala real se passa), modo **HIPERVELOCIDADE**, e marcadores na tela
-(`setBeacon`: nome e distância, presos à borda quando fora de vista) — o primeiro é
-Metrópolis. Ver [[espaco]].
+Acima de 20 km: altitude até a superfície da Terra (perto de outro corpo, "JÚPITER a 700 km"),
+velocidade em km/s (e quantas vezes a luz, que em escala real se passa), modo
+**HIPERVELOCIDADE**, e marcadores na tela (`setBeacon`: nome e distância). Metrópolis (depois
+da Lua, TERRA) e o Sol ficam presos à borda quando fora de vista; os outros corpos só aparecem
+na tela, e dois no mesmo lugar mostram só o primeiro. Distâncias por `distance`: km até 1
+milhão, depois "149,6 milhões de km" e "4,5 bilhões de km"; o objetivo das missões usa
+`goalDistance` (metros perto). Ver [[espaco]].
 
 ## PRs
 
 - [[2026-09-28-pr-007-hud-e-minimapa]]
 - [[2026-09-28-pr-024-espaco-e-terra]] — altitude, km/s e marcadores no espaço
+- [[2026-09-28-pr-025-sistema-solar]] — marcadores de todos os corpos, corpo mais perto, milhões e bilhões de km

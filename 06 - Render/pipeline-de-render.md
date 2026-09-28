@@ -33,7 +33,9 @@ pós-processamento (bloom, tone mapping ACES, vinheta, SMAA).
    vignette, smaa)`, buffer `HalfFloat` para o bloom enxergar valores > 1.
 4. **Espaço** (`space/space.js`): uma `RenderPass` própria antes da cidade, ligada acima de
    2,5 km; a cidade então limpa só a profundidade. O céu (e a cúpula da noite) ganha
-   `uFade`/`uFadeLow` e esmaece com a altitude — ver [[espaco]].
+   `uFade`/`uFadeLow` e esmaece com a altitude. O sistema solar inteiro fica nessa cena, em
+   espaço escalado em log, e a luz direcional vira o Sol visto do herói (`setSunlight`) — ver
+   [[espaco]].
 5. **`quality.js`** — presets `baixa | media | alta` (`?q=` na URL; só chave própria
    do objeto — `?q=constructor` abria o jogo com NaN no pixel ratio).
 
@@ -76,3 +78,4 @@ leem para acender janelas e faróis.
 - [[2026-09-28-pr-019-render-sombras]] — luz a 2.000 m e snap nos eixos da luz
 - [[2026-09-28-pr-023-origem-flutuante]] — o mundo num grupo deslocado
 - [[2026-09-28-pr-024-espaco-e-terra]] — passada do espaço e céu que esmaece
+- [[2026-09-28-pr-025-sistema-solar]] — Sol, coroa, planetas e anéis; espaço escalado em log; luz do Sol no herói

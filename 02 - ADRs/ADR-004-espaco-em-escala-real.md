@@ -25,11 +25,15 @@ e um buffer de profundidade comum, e a cidade é plana.
 - **O espaço é outra cena, desenhada antes da cidade** (uma `RenderPass` própria). A cidade
   vem por cima e limpa só a profundidade. A câmera do espaço fica na origem, com a orientação
   da câmera do jogo, e cada corpo é posto relativo a ela.
-- **Espaço escalado:** corpo além de 100 km é trazido para 100 km com o raio reduzido na
-  mesma razão. O tamanho aparente não muda, e um buffer de profundidade comum serve de 1 m a
-  10¹² m.
+- **Espaço escalado:** até 100 km o corpo fica onde está; além disso, a distância cresce com
+  o log (`100 km × (1 + ln(d / 100 km) / 2)`), com o raio reduzido na mesma razão. O tamanho
+  aparente não muda, quem está mais longe continua atrás, e um buffer de profundidade comum
+  serve de 1 m a 10¹⁶ m. *(Revisado no [[2026-09-28-pr-025-sistema-solar]]: antes, todo corpo
+  além de 100 km ia para 100 km — com a Terra sozinha servia; com a Lua e os planetas, a
+  profundidade entre eles ficava sem ordem.)*
 - **Velocidade proporcional à distância:** acima de 20 km, o boost vira hipervelocidade, com
   alvo de `1,2 × altitude`, e há um teto duro de `2,5 × altitude` em qualquer altitude. A
+  altitude é até a superfície do **corpo mais perto** — a Terra, o Sol ou um planeta. A
   subida é exponencial (25 km → 7.000 km em 8 s), e a aproximação é suave: em cada quadro o
   herói anda bem menos que a distância até a superfície, então nunca a atravessa.
 - **Só Metrópolis tem chão.** A colisão da cidade vale até 3 km de altitude e 60 km de
@@ -42,12 +46,14 @@ e um buffer de profundidade comum, e a cidade é plana.
 ## Consequências
 
 - ✅ De 25 km a 7.000 km em 8 s, e de volta em 15 s, no e2e.
-- ✅ A peça 14 (sistema solar) só acrescenta corpos: mesma cena, mesma lei de velocidade (com
-  o corpo mais perto no lugar da Terra).
+- ✅ A peça 14 (sistema solar) só acrescentou corpos: mesma cena, mesma lei de velocidade, com
+  o corpo mais perto no lugar da Terra ([[2026-09-28-pr-025-sistema-solar]]). Do Sol a
+  Netuno, qualquer destino fica a 14–23 s de voo partindo da órbita da Terra.
 - ⚠️ Com o pitch limitado a 83°, subir "mirando" deriva na horizontal. Para achar a cidade
   de volta existe o marcador na tela, e a tecla de descer (C) desce na vertical.
 - ⚠️ O shader do globo é caro. A passada do espaço só roda acima de 2,5 km, e as oitavas finas
   (e as luzes de cidade em pontos) só perto.
 - ⚠️ Depende da [[ADR-003-origem-flutuante]]: sem ela, o herói se desmancharia longe da cidade.
 
-Implementado no [[2026-09-28-pr-024-espaco-e-terra]].
+Implementado no [[2026-09-28-pr-024-espaco-e-terra]]; estendido ao sistema solar no
+[[2026-09-28-pr-025-sistema-solar]].

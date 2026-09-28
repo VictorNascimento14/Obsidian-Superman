@@ -34,6 +34,6 @@ Escala real, com velocidade proporcional à distância; a carga solar dura minut
 | 12 | Desabamento: dano grande derruba a parte de cima | ✅ [[2026-09-28-pr-022-desabamento]] |
 | 13a | Origem flutuante (infra para o espaço) | ✅ [[2026-09-28-pr-023-origem-flutuante]] |
 | 13 | Subir ao espaço e ver a Terra (globo procedural) | ✅ [[2026-09-28-pr-024-espaco-e-terra]] |
-| 14 | Sistema solar: Sol, planetas e marcadores | ⬜ |
+| 14 | Sistema solar: Sol, planetas e marcadores | ✅ [[2026-09-28-pr-025-sistema-solar]] |
 | 15 | Carga solar: o herói fica mais forte perto do Sol | ⬜ |
 | 16 | Visão de calor carregada atravessa a Terra | ⬜ |

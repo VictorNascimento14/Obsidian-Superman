@@ -31,6 +31,10 @@ npm run e2e
 9. Cenário **espaço**: de 25 km, subindo na vertical com boost, tem de passar de 1.000 km
    em 8 s; descendo na vertical (C + boost), tem de voltar a menos de 5 km em 15 s
    ([[2026-09-28-pr-024-espaco-e-terra]]). Screenshot em `e2e-out/espaco.png`.
+10. Cenário **sistema solar**: de 20.000 km, mirando o Sol com boost, tem de chegar a menos de
+    100.000 km da superfície dele em 45 s (leva ~15 s); depois uma foto de Saturno de perto
+    ([[2026-09-28-pr-025-sistema-solar]]). Screenshots em `e2e-out/sol.png` e
+    `e2e-out/saturno.png`.
 
 Referência de 28/09/2026: 3 missões em **81 s**, 921 pontos.
 
