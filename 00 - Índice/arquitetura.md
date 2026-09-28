@@ -25,3 +25,4 @@ Mapa dos sistemas do jogo. Cada linha vira link quando a nota do sistema nascer.
 ## Infra (`08 - Infra e Deploy`)
 
 - [[build-e-ci]] — dev server, testes, build e os dois workflows
+- [[github-pages]] — deploy a cada merge; [[runbook-conferir-deploy]]

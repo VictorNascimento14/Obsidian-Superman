@@ -20,4 +20,4 @@ documenta o PR.
 | 7 | Poderes: visão de calor | ⏳ |
 | 8 | Tráfego e pedestres | ⏳ |
 | 9 | Missões: resgate e drones | ⏳ |
-| 10 | Deploy no GitHub Pages | ⏳ |
+| 10 | Deploy no GitHub Pages (antecipado) | ✅ [[2026-09-28-pr-006-deploy-pages]] |
