@@ -21,7 +21,10 @@ npm run e2e
    um resgate quebrado passaria com anéis de novo ([[2026-09-28-pr-015-missoes-borda-e-drones]]).
 6. Depois das missões, para o autopiloto e roda o cenário **atravessar**: da rua, a
    150 m/s contra um prédio, exige entrada + saída, entulho e o herói do outro lado
-   ([[2026-09-28-pr-021-atravessar-predios]]).
+   ([[2026-09-28-pr-021-atravessar-predios]]). O alvo é uma face com rua livre a **12 m**
+   (a 40 m o ponto já cai no quarteirão vizinho).
+7. Cenário **desabar**: supersônico num prédio estreito; em 8 s ele tem de ter caído
+   inteiro, com o teto da colisão na altura do toco ([[2026-09-28-pr-022-desabamento]]).
 
 Referência de 28/09/2026: 3 missões em **81 s**, 921 pontos.
 

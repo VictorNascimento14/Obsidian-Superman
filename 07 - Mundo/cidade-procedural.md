@@ -45,6 +45,9 @@ semente, mesma cidade, sempre — coberto por teste.
   com luz de aviso piscando.
 - `update(dt, time, night)` acende janelas, postes e letreiro conforme `night` do
   [[pipeline-de-render]].
+- Montar e cortar prédio mora em `buildingGeo.js` (sem DOM, testado). A cidade guarda,
+  por prédio, onde estão os vértices de cada nível (`refs`) e os objetos de telhado dele,
+  e expõe `setTop`, `makePart` e `roofProps` para o [[destruicao|desabamento]].
 
 **`textures.js`** — tudo em canvas: fachada 8×8 vãos (cor + emissivo das janelas
 acesas + roughness/metalness numa textura só: G e B), chão com faixas, meio-fio e

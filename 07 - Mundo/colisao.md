@@ -53,3 +53,4 @@ Responde três perguntas sobre o mundo, sem three e sem alocar no caminho quente
 - [[2026-09-28-pr-018-mundo-chao-e-pedestres]] — piso no nível do mar; laje e gramado como caixas
 - [[2026-09-28-pr-020-alocacoes-loop-quente]] — consultas sem alocar
 - [[2026-09-28-pr-021-atravessar-predios]] — contato atravessável; `breakable` nos níveis de prédio
+- [[2026-09-28-pr-022-desabamento]] — caixas com índice do prédio; o teto desce no desabamento

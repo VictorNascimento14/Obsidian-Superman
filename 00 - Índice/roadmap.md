@@ -31,7 +31,7 @@ Escala real, com velocidade proporcional à distância; a carga solar dura minut
 | # | Peça | Estado |
 |---|---|---|
 | 11 | Atravessar prédios: furos, entulho, poeira | ✅ [[2026-09-28-pr-021-atravessar-predios]] |
-| 12 | Desabamento: dano grande derruba a parte de cima | ⬜ |
+| 12 | Desabamento: dano grande derruba a parte de cima | ✅ [[2026-09-28-pr-022-desabamento]] |
 | 13 | Subir ao espaço e ver a Terra (globo procedural) | ⬜ |
 | 14 | Sistema solar: Sol, planetas e marcadores | ⬜ |
 | 15 | Carga solar: o herói fica mais forte perto do Sol | ⬜ |
