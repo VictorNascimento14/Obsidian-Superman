@@ -28,6 +28,9 @@ npm run e2e
 8. Cenário **origem flutuante**: o herói a 5·10⁸ m da cidade; a câmera tem de ficar a
    menos de 100 m da origem de render ([[2026-09-28-pr-023-origem-flutuante]]). Screenshot
    em `e2e-out/longe.png`.
+9. Cenário **espaço**: de 25 km, subindo na vertical com boost, tem de passar de 1.000 km
+   em 8 s; descendo na vertical (C + boost), tem de voltar a menos de 5 km em 15 s
+   ([[2026-09-28-pr-024-espaco-e-terra]]). Screenshot em `e2e-out/espaco.png`.
 
 Referência de 28/09/2026: 3 missões em **81 s**, 921 pontos.
 

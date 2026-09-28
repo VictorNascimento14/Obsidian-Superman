@@ -17,6 +17,7 @@ Mapa dos sistemas do jogo. Cada linha vira link quando a nota do sistema nascer.
 - [[missoes]] — treino de voo, resgate e drones
 - [[audio]] — som procedural
 - [[destruicao]] — atravessar prédios (furos, entulho, poeira) e desabamento
+- [[espaco]] — subir ao espaço em escala real: hipervelocidade, a Terra procedural e o marcador de Metrópolis
 
 ## Render (`06 - Render`)
 

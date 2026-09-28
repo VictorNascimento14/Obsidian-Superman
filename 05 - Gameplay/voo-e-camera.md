@@ -44,6 +44,9 @@ teclas **e** botões do mouse; Espaço só arma o pulo com o ponteiro travado.
   cada vez (desliza na parede). Cortar contra a soma das normais (chão + parede = uma
   diagonal) lançava o herói parede acima ao bater rente à rua.
   Impacto acima de 70 m/s vira evento → tremor de câmera.
+- **Espaço**: acima de 20 km o boost vira hipervelocidade (alvo 1,2 × altitude) e há um
+  teto duro de 2,5 × altitude — sobe exponencial, desce suave sem atravessar. Fora do mundo
+  plano não há colisão, e o piso é 30 km: ver [[espaco]].
 - **Atravessar prédio**: voando, ≥ 30 m/s para dentro da parede fura em vez de parar — ver
   [[destruicao]]. Sem pouso enquanto estiver dentro de um prédio.
 - **Pouso**: tocou chão/telhado a menos de 18 m/s, sem subir → `ground`.
@@ -85,3 +88,4 @@ teclas **e** botões do mouse; Espaço só arma o pulo com o ponteiro travado.
 - [[2026-09-28-pr-017-voo-colisao-e-camera]] — corte por superfície; câmera traça do herói
 - [[2026-09-28-pr-021-atravessar-predios]] — atravessar prédios
 - [[2026-09-28-pr-023-origem-flutuante]] — câmera filha do mundo
+- [[2026-09-28-pr-024-espaco-e-terra]] — hipervelocidade, teto e piso no espaço

@@ -37,6 +37,14 @@ tags: [sistema, hud, ui]
 - **Zoom pela velocidade** (3,2× parado → 1× a 300 m/s).
 - **Marcadores fora do círculo** ficam presos na borda, na direção certa.
 
+## No espaço
+
+Acima de 20 km: altitude até a superfície da Terra em km, velocidade em km/s (e quantas vezes
+a luz, que em escala real se passa), modo **HIPERVELOCIDADE**, e marcadores na tela
+(`setBeacon`: nome e distância, presos à borda quando fora de vista) — o primeiro é
+Metrópolis. Ver [[espaco]].
+
 ## PRs
 
 - [[2026-09-28-pr-007-hud-e-minimapa]]
+- [[2026-09-28-pr-024-espaco-e-terra]] — altitude, km/s e marcadores no espaço

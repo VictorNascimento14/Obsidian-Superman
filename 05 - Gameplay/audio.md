@@ -39,6 +39,9 @@ Um **compressor** no fim da cadeia impede que estrondo e explosão juntos estour
 
 ## Armadilhas
 
+- **No vácuo não há vento**: a velocidade que alimenta o vento é multiplicada pela
+  presença de ar (esmaece de 4 a 40 km, junto com o céu) — a 5.000 km/s ele ficaria no talo.
+
 - **`AudioContext` só nasce de gesto do usuário**: é criado no clique de "Clique para
   voar" (`audio.start()`), nunca no carregamento.
 - **Aba em segundo plano para o loop, não o som**: sem `audio.suspend()` na pausa, o
@@ -53,3 +56,4 @@ Um **compressor** no fim da cadeia impede que estrondo e explosão juntos estour
 
 - [[2026-09-28-pr-012-audio]]
 - [[2026-09-28-pr-016-pausa-e-pointer-lock]] — som suspenso na pausa
+- [[2026-09-28-pr-024-espaco-e-terra]] — no vácuo não há vento
