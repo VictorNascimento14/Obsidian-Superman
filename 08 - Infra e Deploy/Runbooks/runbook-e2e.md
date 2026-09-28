@@ -19,6 +19,9 @@ npm run e2e
 5. **Passa** com ao menos uma vitória de **cada** tipo e console sem erro; **falha**
    (exit 1) no contrário ou depois de 240 s. Três vitórias de qualquer tipo não bastam:
    um resgate quebrado passaria com anéis de novo ([[2026-09-28-pr-015-missoes-borda-e-drones]]).
+6. Depois das missões, para o autopiloto e roda o cenário **atravessar**: da rua, a
+   150 m/s contra um prédio, exige entrada + saída, entulho e o herói do outro lado
+   ([[2026-09-28-pr-021-atravessar-predios]]).
 
 Referência de 28/09/2026: 3 missões em **81 s**, 921 pontos.
 

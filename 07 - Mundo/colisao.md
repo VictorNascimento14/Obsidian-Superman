@@ -14,7 +14,7 @@ Responde três perguntas sobre o mundo, sem three e sem alocar no caminho quente
 
 | Função | Pergunta | Quem usa |
 |---|---|---|
-| `resolveSphere(p, r, outNormal, onContact?)` | O herói (esfera) está dentro de algo? Empurra para fora; `onContact` recebe cada normal. | voo |
+| `resolveSphere(p, r, outNormal, onContact?, skip?)` | O herói (esfera) está dentro de algo? Empurra para fora. `onContact(n, idx)` recebe cada normal e decide antes do empurrão (`true` = atravessável); `skip` = caixas que ele está atravessando. | voo |
 | `raycast(o, dir, max, out)` | Onde um raio acerta primeiro (prédio ou chão)? | visão de calor, câmera |
 | `heightAt(x, z)` | Qual o telhado mais alto sob este ponto? | pouso, missões |
 
@@ -52,3 +52,4 @@ Responde três perguntas sobre o mundo, sem three e sem alocar no caminho quente
 - [[2026-09-28-pr-017-voo-colisao-e-camera]] — normal por contato (`onContact`)
 - [[2026-09-28-pr-018-mundo-chao-e-pedestres]] — piso no nível do mar; laje e gramado como caixas
 - [[2026-09-28-pr-020-alocacoes-loop-quente]] — consultas sem alocar
+- [[2026-09-28-pr-021-atravessar-predios]] — contato atravessável; `breakable` nos níveis de prédio

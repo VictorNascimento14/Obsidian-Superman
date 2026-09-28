@@ -16,6 +16,7 @@ Mapa dos sistemas do jogo. Cada linha vira link quando a nota do sistema nascer.
 - [[visao-de-calor]] — mira, feixes, impacto, energia e alvos
 - [[missoes]] — treino de voo, resgate e drones
 - [[audio]] — som procedural
+- [[destruicao]] — atravessar prédios: furos, entulho e poeira
 
 ## Render (`06 - Render`)
 

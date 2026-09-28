@@ -44,6 +44,8 @@ teclas **e** botões do mouse; Espaço só arma o pulo com o ponteiro travado.
   cada vez (desliza na parede). Cortar contra a soma das normais (chão + parede = uma
   diagonal) lançava o herói parede acima ao bater rente à rua.
   Impacto acima de 70 m/s vira evento → tremor de câmera.
+- **Atravessar prédio**: voando, ≥ 30 m/s para dentro da parede fura em vez de parar — ver
+  [[destruicao]]. Sem pouso enquanto estiver dentro de um prédio.
 - **Pouso**: tocou chão/telhado a menos de 18 m/s, sem subir → `ground`.
   Andar para fora da beirada volta para `air` (não cai).
 - **Eventos**: `takeoff`, `land`, `supersonic`, `sonicboom` (cruzou 340 m/s — anel
@@ -77,3 +79,4 @@ teclas **e** botões do mouse; Espaço só arma o pulo com o ponteiro travado.
 - [[2026-09-28-pr-005-voo-e-camera]]
 - [[2026-09-28-pr-016-pausa-e-pointer-lock]] — despausar só com o lock confirmado
 - [[2026-09-28-pr-017-voo-colisao-e-camera]] — corte por superfície; câmera traça do herói
+- [[2026-09-28-pr-021-atravessar-predios]] — atravessar prédios
