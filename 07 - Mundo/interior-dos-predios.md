@@ -36,7 +36,9 @@ do material.
 - cada andar sai de uma semente própria (prédio + andar). O mesmo pedaço tem o mesmo id em
   qualquer faixa, e o que quebrou continua quebrado quando a faixa muda;
 - as lajes são do prédio, não do andar: uma em cada divisa de andar e uma embaixo do telhado
-  de cada nível. Num recuo, fica a do nível de baixo, que é maior;
+  de cada nível. Num recuo, fica a do nível de baixo, que é maior. Elas vêm em placas de 6 m,
+  para os andares em volta de um furo cederem em pedaços (`collapseRegion`,
+  [[2026-09-28-pr-030-queda-realista]]);
 - com núcleo (planta de 16 m ou mais), 45% dos andares são de salas: um corredor em volta do
   núcleo, divisórias até a fachada e uma mesa por sala. O resto é planta livre, com mesas em
   fileiras e armários encostados no núcleo;

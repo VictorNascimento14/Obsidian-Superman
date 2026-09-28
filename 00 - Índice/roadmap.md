@@ -51,5 +51,5 @@ cedem só os andares em volta do furo; a explosão tem clarão, fogo e fumaça.
 |---|---|---|
 | 17 | Interior dos prédios: andares, pilares, salas, móveis; furo aberto de verdade | ✅ [[2026-09-28-pr-028-interior-dos-predios]] |
 | 18 | Explosão no impacto: clarão, bola de fogo, fumaça, onda de choque | ✅ [[2026-09-28-pr-029-explosao]] |
-| 19 | Queda realista: rápido derruba, devagar cede em volta; tombar, partir no ar, nuvem de poeira | ⬜ |
+| 19 | Queda realista: rápido derruba, devagar cede em volta; tombar, partir no ar, nuvem de poeira | ✅ [[2026-09-28-pr-030-queda-realista]] |
 | 20 | Visão de calor corta: rasgo em brasa, e o corte de lado a lado derruba | ⬜ |

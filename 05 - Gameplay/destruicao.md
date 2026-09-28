@@ -21,6 +21,8 @@ esmaga até o chão, numa nuvem de poeira, como numa demolição. Sobra um toco 
 
 ![[desabamento.jpg]]
 
+![[queda-realista.jpg]]
+
 ## Como funciona
 
 **Decisão no contato** (`flight.js`, testado). O `onContact` da [[colisao]] recebe a
@@ -66,11 +68,22 @@ Cada entrada e saída vira um evento `breach` com ponto, normal, direção e vel
 
 **Dano** (`world/damage.js`, lógica pura testada). Cada entrada de travessia tira do andar
 `rombo (6 m) / largura atravessada × (1 + v/200)`, somado por faixa de 8 m de altura.
-Quando uma faixa chega a 50%, tudo acima da base dela desaba. Na prática:
+Quando uma faixa chega a 50%, tudo acima da base dela desaba. Além disso, **golpe com força
+de supersônico derruba qualquer prédio de uma vez** (`DAMAGE.topple` = 340). A força é a
+velocidade vezes a [[carga-solar]]: 150 m/s carregado também derruba. Foi escolha do jogador
+na fase 3. Na prática:
 
-- supersônico (420 m/s) num prédio de até ~37 m de largura cai de uma vez;
-- em cruzeiro, são precisas duas passadas na mesma altura;
+- supersônico (ou carregado): a parte de cima cai, em qualquer largura;
+- em cruzeiro, são precisas duas passadas na mesma altura num prédio estreito;
 - passadas em alturas diferentes não somam, porque é o mesmo andar que precisa ceder.
+
+**Ceder em volta do furo.** Furo que não derruba (entrada ou saída) faz os andares em volta
+dele cederem, 0,3 a 0,65 s depois (evento `cede`):
+
+- tudo do interior numa esfera de 4 a 7 m cai, laje inclusive — por isso a laje vem em placas
+  de 6 m ([[interior-dos-predios]]);
+- a fachada abre num rombo de vários andares (uma abertura maior);
+- blocos grandes de concreto despencam para a rua, com poeira.
 
 O Planeta Diário fura, mas não cai, porque o globo e o letreiro não acompanhariam.
 
@@ -82,17 +95,25 @@ acima do corte vira um ponto (triângulo de área zero). A cidade guarda, por pr
 primeiro vértice de cada nível em cada malha mesclada (`city.refs`). Só essas faixas sobem
 para a GPU (`addUpdateRange`).
 
-**Queda** (`world/collapse.js`):
+**Queda** (`world/fall.js`, lógica pura testada; `world/collapse.js`, o desenho):
 
-- `city.makePart` remonta a parte de cima idêntica (mesmo deslocamento de janelas, mesmo
-  tom, montada com y absoluto para o `v` bater) e ela cai com 7 m/s² efetivos, tombando
-  até ~8°;
-- a linha de esmagamento (base do bloco) encurta o prédio no lugar a cada quadro e baixa o
-  teto das caixas de colisão;
-- os objetos de telhado do prédio caem junto: mesma transformação do bloco;
-- dos lados, na linha de esmagamento, sai poeira grande e entulho;
-- o bloco afunda sob a laje da rua, que é opaca e o esconde. No fim sobram o toco de 3 m e
-  escombros (70 pedaços grandes), e furos e marcas de queimado da parte que caiu somem.
+- a parte de cima vira uma pilha de até 5 segmentos de ~30 m. Cada um é uma cópia idêntica do
+  trecho do prédio (`city.makePart(bi, y0, y1)`: mesmas janelas, mesmo tom), com uma tampa de
+  concreto quebrado onde o corte cai no meio de um nível. Sem ela, um segmento solto seria uma
+  casca oca;
+- primeiro o bloco inteiro desce a 6 m/s², esmagando os andares de baixo. Ao mesmo tempo ele
+  tomba **para o lado do golpe**, girando sobre a borda da base daquele lado, cada vez mais
+  rápido, como uma árvore;
+- em 1,4 s os segmentos se soltam, cada um com a velocidade que tinha, um afastamento e um giro
+  próprios, e caem como corpos rígidos (7 m/s²);
+- cada segmento que chega ao chão (ou ao telhado de um vizinho) afunda um quarto da altura
+  nele e se desfaz. Viram pedaços grandes e uma **nuvem de poeira em anel** que corre pelas
+  ruas e fica no ar por 14 a 20 s;
+- o toco é esmagado pelo segmento de baixo até 3 m, com poeira e entulho saindo pelos lados na
+  linha de esmagamento. As caixas de colisão acompanham;
+- os objetos de telhado caem com o segmento de cima;
+- no fim sobram o toco de 3 m e escombros, e furos e marcas de queimado da parte que caiu
+  somem.
 
 ## Parâmetros que importam
 
@@ -103,7 +124,9 @@ para a GPU (`addUpdateRange`).
 | `SMASH.perMeter` | 0,012 por m (× v) | Um prédio de 30 m tira ~30% |
 | `SMASH.min` | 10 m/s | Nunca fica preso dentro |
 | Entulho | 1.200 pedaços, sono < 0,8 m/s | Cabe no orçamento de 60 fps |
-| Queda | 7 m/s² efetivos, tombando até ~8° | Mais lenta que queda livre: os andares freiam |
+| Queda | inteira 1,4 s (6 m/s², tombo até 0,9 rad), depois segmentos a 7 m/s² | Tomba para o lado do golpe e se parte no ar |
+| Derrubar de uma vez | força ≥ 340 | Supersônico ou carregado derruba qualquer prédio |
+| Ceder | esfera de 4–7 m, 0,3–0,65 s depois | Andares em volta do furo caem em pedaços |
 | Dano para desabar | 50% de uma faixa de 8 m | Supersônico derruba prédio estreito de uma vez |
 | Toco | 3 m | O térreo fica, com escombros |
 | Carga solar | `might = 1 + 2 × carga` | Fachada e metros freiam `might` vezes menos; o dano usa `force = v × might` |
@@ -136,3 +159,4 @@ mesmo golpe tira ~0,3 da faixa e só fura). A velocidade para furar continua 30 
 - [[2026-09-28-pr-026-carga-solar]] — força e freio com a carga solar
 - [[2026-09-28-pr-028-interior-dos-predios]] — interior, furo aberto de verdade, peças que quebram
 - [[2026-09-28-pr-029-explosao]] — explosão em cada ruptura
+- [[2026-09-28-pr-030-queda-realista]] — rápido derruba, devagar cede; tombo, segmentos, nuvem de poeira

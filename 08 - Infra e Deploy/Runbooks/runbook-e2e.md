@@ -26,8 +26,12 @@ npm run e2e
    pelo menos uma peça quebrada lá dentro e os dois furos abertos
    ([[2026-09-28-pr-028-interior-dos-predios]]), e as explosões: duas ou mais, com fogo no ar
    logo depois e fumaça 1,2 s depois ([[2026-09-28-pr-029-explosao]]).
-7. Cenário **desabar**: supersônico num prédio estreito; em 8 s ele tem de ter caído
+7. Cenário **desabar**: supersônico num prédio estreito; em 12 s ele tem de ter caído
    inteiro, com o teto da colisão na altura do toco ([[2026-09-28-pr-022-desabamento]]).
+   Depois, **derrubar largo**: supersônico num prédio de 60 m ou mais tem de desabar, com 2 ou
+   mais segmentos caindo 1,8 s depois; e **ceder**: a 150 m/s num prédio largo, ele não pode
+   cair, e os andares em volta de algum furo têm de ceder
+   ([[2026-09-28-pr-030-queda-realista]]).
 8. Cenário **origem flutuante**: o herói a 5·10⁸ m da cidade; a câmera tem de ficar a
    menos de 100 m da origem de render ([[2026-09-28-pr-023-origem-flutuante]]). Screenshot
    em `e2e-out/longe.png`.
