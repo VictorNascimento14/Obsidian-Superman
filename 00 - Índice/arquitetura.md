@@ -16,6 +16,9 @@ Mapa dos sistemas do jogo. Cada linha vira link quando a nota do sistema nascer.
 
 ## Mundo (`07 - Mundo`)
 
+- [[cidade-procedural]] — layout, prédios, parque, marco, texturas
+- [[colisao]] — esfera, raio e altura do telhado
+
 ## Infra (`08 - Infra e Deploy`)
 
 - [[build-e-ci]] — dev server, testes, build e os dois workflows
