@@ -52,6 +52,10 @@ leem para acender janelas e faróis.
 
 ## Armadilhas
 
+- **Posição absoluta longe da cidade quebra a GPU (float32)**: tudo que tem posição no
+  mundo mora no grupo `world`, deslocado por −origem, e a câmera é filha dele — ver
+  [[ADR-003-origem-flutuante]]. Neblina e mapa de ambiente ficam na `Scene` de verdade: num
+  grupo o renderer os ignora (a cidade ficou escura quando o céu os pôs no grupo).
 - **Snap de texel é nos eixos da luz, não do mundo**: arredondar x/z desloca o shadow map
   por frações de texel (um ponto fixo variava 0,97 texel com o herói andando). Projete o
   foco em `right` e `up` da câmera de sombra, arredonde, reconstrua.
@@ -67,3 +71,4 @@ leem para acender janelas e faróis.
 
 - [[2026-09-28-pr-002-pipeline-de-render]]
 - [[2026-09-28-pr-019-render-sombras]] — luz a 2.000 m e snap nos eixos da luz
+- [[2026-09-28-pr-023-origem-flutuante]] — o mundo num grupo deslocado

@@ -66,6 +66,10 @@ teclas **e** botões do mouse; Espaço só arma o pulo com o ponteiro travado.
 
 ## Armadilhas
 
+- **A câmera é filha do grupo `world`** (origem flutuante, [[ADR-003-origem-flutuante]]):
+  a posição dela é verdadeira, mas o `lookAt` quer o alvo em espaço de render —
+  `camera.parent.localToWorld(alvo)`.
+
 - **"Antes" do estrondo medido depois da aceleração** nunca via a travessia: o lerp é
   que cruza os 340 m/s. Mede no início do `update`.
 - **Herói "sumido" em supervelocidade** — ver [[heroi-sumido-em-supervelocidade]].
@@ -80,3 +84,4 @@ teclas **e** botões do mouse; Espaço só arma o pulo com o ponteiro travado.
 - [[2026-09-28-pr-016-pausa-e-pointer-lock]] — despausar só com o lock confirmado
 - [[2026-09-28-pr-017-voo-colisao-e-camera]] — corte por superfície; câmera traça do herói
 - [[2026-09-28-pr-021-atravessar-predios]] — atravessar prédios
+- [[2026-09-28-pr-023-origem-flutuante]] — câmera filha do mundo

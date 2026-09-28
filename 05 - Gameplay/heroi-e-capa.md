@@ -45,6 +45,9 @@ O laço das restrições é indexado e usa `Math.sqrt`: desestruturar no `for…
 `Math.hypot` do V8 alocavam por restrição (~70% de tudo que o jogo alocava). As
 posições vão direto no array do atributo e as normais saem de `gridNormals` (a mesma
 conta do `computeVertexNormals`, sem alocar) — ver [[perfilar-alocacao-antes-de-cortar]].
+Os vértices são **relativos** ao mesh, que fica na origem da capa, e os pinos saem do
+`matrixWorld` de volta para o espaço do mundo: com posição absoluta, a capa se desfaria
+longe da cidade ([[ADR-003-origem-flutuante]]).
 
 ## Parâmetros que importam
 
@@ -73,3 +76,4 @@ conta do `computeVertexNormals`, sem alocar) — ver [[perfilar-alocacao-antes-d
 
 - [[2026-09-28-pr-004-heroi-e-capa]]
 - [[2026-09-28-pr-020-alocacoes-loop-quente]] — capa sem alocar por quadro
+- [[2026-09-28-pr-023-origem-flutuante]] — vértices relativos ao mesh

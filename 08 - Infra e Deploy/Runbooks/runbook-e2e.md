@@ -25,6 +25,9 @@ npm run e2e
    (a 40 m o ponto já cai no quarteirão vizinho).
 7. Cenário **desabar**: supersônico num prédio estreito; em 8 s ele tem de ter caído
    inteiro, com o teto da colisão na altura do toco ([[2026-09-28-pr-022-desabamento]]).
+8. Cenário **origem flutuante**: o herói a 5·10⁸ m da cidade; a câmera tem de ficar a
+   menos de 100 m da origem de render ([[2026-09-28-pr-023-origem-flutuante]]). Screenshot
+   em `e2e-out/longe.png`.
 
 Referência de 28/09/2026: 3 missões em **81 s**, 921 pontos.
 

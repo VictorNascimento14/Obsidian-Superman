@@ -43,6 +43,13 @@ Com a câmera centrada, o ponto mirado fica **exatamente atrás do herói**: o c
 esconde os feixes. A câmera agora fica 1,1 m à direita (1,7 m ao mirar, e 30% mais
 perto), e centraliza entre 20 e 80 m/s — em voo rápido o ombro não faz sentido.
 
+## Origem flutuante
+
+O olho (`getWorldPosition`) sai em espaço de render e a mira em espaço verdadeiro: o olho volta
+para o do mundo (`scene.worldToLocal`), e o `lookAt` do feixe recebe a mira convertida —
+ver [[ADR-003-origem-flutuante]].
+
 ## PRs
 
 - [[2026-09-28-pr-008-visao-de-calor]]
+- [[2026-09-28-pr-023-origem-flutuante]] — olho e mira no mesmo espaço
