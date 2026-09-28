@@ -14,10 +14,11 @@ npm run e2e
 2. Abre o Chrome headless (`/usr/bin/google-chrome`, ou `CHROME_PATH`).
 3. Injeta `scripts/e2e/autopilot.js`, que joga as missões como um jogador —
    ver [[verificacao-ponta-a-ponta-por-autopiloto]].
-4. Imprime a cada 2 s: missão atual, cumpridas, pontos. Salva uma screenshot por
-   missão em `e2e-out/`.
-5. **Passa** com 3 missões cumpridas e console sem erro; **falha** (exit 1) no
-   contrário ou depois de 240 s.
+4. Imprime a cada 2 s: missão atual, vitórias por tipo (anéis · resgate · drones) e
+   pontos. Salva uma screenshot por missão em `e2e-out/`.
+5. **Passa** com ao menos uma vitória de **cada** tipo e console sem erro; **falha**
+   (exit 1) no contrário ou depois de 240 s. Três vitórias de qualquer tipo não bastam:
+   um resgate quebrado passaria com anéis de novo ([[2026-09-28-pr-015-missoes-borda-e-drones]]).
 
 Referência de 28/09/2026: 3 missões em **81 s**, 921 pontos.
 
