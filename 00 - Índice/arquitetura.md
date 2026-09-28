@@ -23,6 +23,7 @@ Mapa dos sistemas do jogo. Cada linha vira link quando a nota do sistema nascer.
 
 - [[cidade-procedural]] — layout, prédios, parque, marco, texturas
 - [[colisao]] — esfera, raio e altura do telhado
+- [[trafego-e-pedestres]] — carros, curvas, pedestres e faróis
 
 ## Infra (`08 - Infra e Deploy`)
 
