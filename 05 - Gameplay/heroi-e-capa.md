@@ -41,6 +41,10 @@ isso "braço à frente" é braço **acima da cabeça** no referencial do corpo (
 arrasto exponencial em direção à velocidade do ar, resolve restrições de distância
 (estruturais, de cisalhamento e de flexão) e deriva a velocidade da posição.
 7 × 12 partículas, trapézio de 0,5 → 1,0 m por 1,4 m, linha de cima presa aos ombros.
+O laço das restrições é indexado e usa `Math.sqrt`: desestruturar no `for…of` e o
+`Math.hypot` do V8 alocavam por restrição (~70% de tudo que o jogo alocava). As
+posições vão direto no array do atributo e as normais saem de `gridNormals` (a mesma
+conta do `computeVertexNormals`, sem alocar) — ver [[perfilar-alocacao-antes-de-cortar]].
 
 ## Parâmetros que importam
 
@@ -68,3 +72,4 @@ arrasto exponencial em direção à velocidade do ar, resolve restrições de di
 ## PRs
 
 - [[2026-09-28-pr-004-heroi-e-capa]]
+- [[2026-09-28-pr-020-alocacoes-loop-quente]] — capa sem alocar por quadro

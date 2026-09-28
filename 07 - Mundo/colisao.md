@@ -28,6 +28,9 @@ Responde três perguntas sobre o mundo, sem three e sem alocar no caminho quente
   laje da ilha (topo em 0) e o gramado do parque (0,6) são caixas como os prédios.
 - `raycast`: marcha pelo segmento em passos de meia célula visitando a vizinhança
   3×3, teste de slab por caixa; o piso entra como plano em `y = floor`.
+- Sem alocação por consulta: os visitantes do `forEachNear` são criados uma vez (o
+  estado da consulta fica no mundo), os eixos do slab são uma constante de módulo e as
+  listas de célula são percorridas por índice.
 
 ## Armadilhas
 
@@ -48,3 +51,4 @@ Responde três perguntas sobre o mundo, sem three e sem alocar no caminho quente
 - [[2026-09-28-pr-003-cidade-procedural]]
 - [[2026-09-28-pr-017-voo-colisao-e-camera]] — normal por contato (`onContact`)
 - [[2026-09-28-pr-018-mundo-chao-e-pedestres]] — piso no nível do mar; laje e gramado como caixas
+- [[2026-09-28-pr-020-alocacoes-loop-quente]] — consultas sem alocar
