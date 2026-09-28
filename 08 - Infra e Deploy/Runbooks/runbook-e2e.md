@@ -24,7 +24,8 @@ npm run e2e
    ([[2026-09-28-pr-021-atravessar-predios]]). O alvo é uma face com rua livre a **12 m**
    (a 40 m o ponto já cai no quarteirão vizinho). Exige também o interior montado no prédio,
    pelo menos uma peça quebrada lá dentro e os dois furos abertos
-   ([[2026-09-28-pr-028-interior-dos-predios]]).
+   ([[2026-09-28-pr-028-interior-dos-predios]]), e as explosões: duas ou mais, com fogo no ar
+   logo depois e fumaça 1,2 s depois ([[2026-09-28-pr-029-explosao]]).
 7. Cenário **desabar**: supersônico num prédio estreito; em 8 s ele tem de ter caído
    inteiro, com o teto da colisão na altura do toco ([[2026-09-28-pr-022-desabamento]]).
 8. Cenário **origem flutuante**: o herói a 5·10⁸ m da cidade; a câmera tem de ficar a

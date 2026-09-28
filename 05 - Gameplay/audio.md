@@ -61,3 +61,4 @@ Um **compressor** no fim da cadeia impede que estrondo e explosão juntos estour
 - [[2026-09-28-pr-016-pausa-e-pointer-lock]] — som suspenso na pausa
 - [[2026-09-28-pr-024-espaco-e-terra]] — no vácuo não há vento
 - [[2026-09-28-pr-025-sistema-solar]] — som da cidade só no mundo plano
+- [[2026-09-28-pr-029-explosao]] — `audio.explosion(k)`: estrondo grave e longo, pela força

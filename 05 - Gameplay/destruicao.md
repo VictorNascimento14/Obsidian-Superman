@@ -59,6 +59,8 @@ Cada entrada e saída vira um evento `breach` com ponto, normal, direção e vel
   [[interior-dos-predios]].
 - Som de parede cedendo (`audio.breach`: estalo seco na entrada, estrondo na saída) e
   tremor de câmera.
+- **Explosão**: clarão, onda de choque, bola de fogo, brasas e fumaça saindo da fachada, maiores
+  com a força do golpe — ver [[explosao]].
 
 ### Desabamento
 
@@ -133,3 +135,4 @@ mesmo golpe tira ~0,3 da faixa e só fura). A velocidade para furar continua 30 
 - [[2026-09-28-pr-022-desabamento]]
 - [[2026-09-28-pr-026-carga-solar]] — força e freio com a carga solar
 - [[2026-09-28-pr-028-interior-dos-predios]] — interior, furo aberto de verdade, peças que quebram
+- [[2026-09-28-pr-029-explosao]] — explosão em cada ruptura
