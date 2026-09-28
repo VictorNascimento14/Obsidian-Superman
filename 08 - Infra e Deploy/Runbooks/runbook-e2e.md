@@ -31,7 +31,10 @@ npm run e2e
    Depois, **derrubar largo**: supersônico num prédio de 60 m ou mais tem de desabar, com 2 ou
    mais segmentos caindo 1,8 s depois; e **ceder**: a 150 m/s num prédio largo, ele não pode
    cair, e os andares em volta de algum furo têm de ceder
-   ([[2026-09-28-pr-030-queda-realista]]).
+   ([[2026-09-28-pr-030-queda-realista]]). Por fim, a **visão de calor**: parado na rua de
+   frente para uma fachada de 25–40 m, varrendo a mira de um lado ao outro em 2,4 s, o prédio
+   tem de ser fatiado; parada 1 s num ponto, tem de estourar pelo menos um furo
+   ([[2026-09-28-pr-031-visao-corta]]). Screenshot em `e2e-out/cortar.png`.
 8. Cenário **origem flutuante**: o herói a 5·10⁸ m da cidade; a câmera tem de ficar a
    menos de 100 m da origem de render ([[2026-09-28-pr-023-origem-flutuante]]). Screenshot
    em `e2e-out/longe.png`.

@@ -160,3 +160,4 @@ mesmo golpe tira ~0,3 da faixa e só fura). A velocidade para furar continua 30 
 - [[2026-09-28-pr-028-interior-dos-predios]] — interior, furo aberto de verdade, peças que quebram
 - [[2026-09-28-pr-029-explosao]] — explosão em cada ruptura
 - [[2026-09-28-pr-030-queda-realista]] — rápido derruba, devagar cede; tombo, segmentos, nuvem de poeira
+- [[2026-09-28-pr-031-visao-corta]] — a visão de calor fatia prédios (corte limpo) e estoura furos

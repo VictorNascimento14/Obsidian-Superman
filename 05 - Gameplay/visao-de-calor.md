@@ -48,6 +48,28 @@ Com 35% de carga ou mais, o raio que acerta a Terra a atravessa e deixa um burac
 e na saída — ver [[atravessar-a-terra]]. Para isso o `update(dt, wants, over)` aceita a
 direção da mira assistida (`over`) no lugar da direção da câmera.
 
+## Corta e quebra prédios
+
+![[visao-corta.jpg]]
+
+**Corte** (`powers/cuts.js`, lógica pura testada):
+
+- a cada quadro com o raio numa fachada, as células de 1 m em volta do ponto (0,9 m de cada
+  lado, ×3 com a carga solar cheia) ficam queimadas, por prédio, face e faixa de 8 m de altura;
+- perto da divisa de duas faixas (2,5 m), o raio queima as duas, porque a mira sobe e desce ao
+  varrer a parede;
+- quando 70% da largura da face está queimada numa faixa, o prédio está **fatiado**: a parte
+  de cima cai a partir da altura do corte (`collapses.slice`). É um corte limpo: não esmaga os
+  andares de baixo, só tomba sobre a borda do corte, escorrega para fora (para onde o raio ia)
+  e cai. O toco fica na altura do corte, com escombros em cima (aviso **CORTADO!**);
+- **parado num ponto** por 0,6 s (0,15 s com a carga solar), o raio estoura um furo. Ele entra
+  no jogo no quadro seguinte como uma ruptura, a 120 m/s: furo aberto, explosão, interior e
+  andares cedendo. Dois furos na mesma faixa derrubam um prédio de ~40 m.
+
+**Brasa** (`heatvision.js`): cada marca de queimado ganha um brilho aditivo em HDR que esfria
+em 2,5 s. Com o raio varrendo, vira uma linha incandescente que escurece. `surfaceHit` expõe o
+ponto, a normal e a caixa acertados no quadro.
+
 ## Câmera sobre o ombro
 
 Com a câmera centrada, o ponto mirado fica **exatamente atrás do herói**: o corpo
@@ -66,3 +88,4 @@ ver [[ADR-003-origem-flutuante]].
 - [[2026-09-28-pr-023-origem-flutuante]] — olho e mira no mesmo espaço
 - [[2026-09-28-pr-026-carga-solar]] — alcance, dano e raio com a carga solar; o Sol paga a reserva
 - [[2026-09-28-pr-027-visao-atravessa-terra]] — a mira assistida guia o raio até a Terra
+- [[2026-09-28-pr-031-visao-corta]] — corta (fatia) e quebra (estoura furo) prédios; corte em brasa
