@@ -32,4 +32,5 @@ travando no meio da luta, o que confirma o balanceamento da [[visao-de-calor]].
 
 ## Como evitar regressão
 
-O harness vive no repositório a partir do PR seguinte (`scripts/e2e`).
+O harness vive no repositório desde o [[2026-09-28-pr-011-e2e-autopiloto]]: `npm run e2e`
+— ver [[runbook-e2e]].

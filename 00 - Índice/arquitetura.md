@@ -30,3 +30,4 @@ Mapa dos sistemas do jogo. Cada linha vira link quando a nota do sistema nascer.
 
 - [[build-e-ci]] — dev server, testes, build e os dois workflows
 - [[github-pages]] — deploy a cada merge; [[runbook-conferir-deploy]]
+- [[runbook-e2e]] — autopiloto que cumpre as missões no navegador
