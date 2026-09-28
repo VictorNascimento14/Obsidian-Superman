@@ -12,6 +12,7 @@ Mapa dos sistemas do jogo. Cada linha vira link quando a nota do sistema nascer.
 
 - [[heroi-e-capa]] — modelo, poses e capa simulada
 - [[voo-e-camera]] — física de voo, controles e câmera
+- [[hud-e-minimapa]] — velocímetro, objetivo, avisos e minimapa
 
 ## Render (`06 - Render`)
 
