@@ -41,17 +41,22 @@ Cada entrada e saída vira um evento `breach` com ponto, normal, direção e vel
 
 **Efeitos** (`fx/breach.js`):
 
-- **Furo**: decalque com o rombo desenhado (a parede é uma casca oca, então o buraco não
-  é recortado), alinhado ao eixo da face. O tamanho cresce com a velocidade (~6–8 m a
-  150 m/s). Pool de 160.
+- **Furo**: decalque com o rombo desenhado, alinhado ao eixo da face. O tamanho cresce com a
+  velocidade (~6–8 m a 150 m/s). Pool de 160. Nos prédios com interior montado o furo é
+  **aberto de verdade**: a parede e o miolo do decalque são recortados no shader, e o andar
+  aparece lá dentro — ver [[interior-dos-predios]].
 - **Entulho** (`fx/debrisSim.js`, lógica pura testada): pool de 1.200 pedaços em arrays
   planos, com gravidade, quique com atrito, giro e sono ao parar. Na saída, o material
   empurrado sai a 55–110% da velocidade do herói e voa junto com ele; na entrada, a
   fachada estoura para fora. 80% concreto, 20% vidro.
 - **Poeira**: `Points` com tamanho e opacidade por nuvem, num shader próprio.
 - **Poeira na tela**: enquanto a câmera está dentro de um prédio (`heightAt` da câmera
-  acima dela), o HUD cobre a tela de poeira. As paredes são de face única e, lá de dentro,
-  a cidade apareceria "de raio-x".
+  acima dela), o HUD cobre a tela de poeira. Com o interior montado, a poeira fica em 12%,
+  porque lá dentro há o que ver; sem ele, as paredes de face única mostrariam a cidade
+  "de raio-x".
+- **Interior**: lajes, pilares, núcleo, salas, mesas e luminárias em volta de onde o herói
+  entrou. O que ele toca quebra e vira entulho na cor do material — ver
+  [[interior-dos-predios]].
 - Som de parede cedendo (`audio.breach`: estalo seco na entrada, estrondo na saída) e
   tremor de câmera.
 
@@ -127,3 +132,4 @@ mesmo golpe tira ~0,3 da faixa e só fura). A velocidade para furar continua 30 
 - [[2026-09-28-pr-021-atravessar-predios]]
 - [[2026-09-28-pr-022-desabamento]]
 - [[2026-09-28-pr-026-carga-solar]] — força e freio com a carga solar
+- [[2026-09-28-pr-028-interior-dos-predios]] — interior, furo aberto de verdade, peças que quebram

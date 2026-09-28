@@ -47,7 +47,8 @@ semente, mesma cidade, sempre — coberto por teste.
   [[pipeline-de-render]].
 - Montar e cortar prédio mora em `buildingGeo.js` (sem DOM, testado). A cidade guarda,
   por prédio, onde estão os vértices de cada nível (`refs`) e os objetos de telhado dele,
-  e expõe `setTop`, `makePart` e `roofProps` para o [[destruicao|desabamento]].
+  e expõe `setTop`, `makePart` e `roofProps` para o [[destruicao|desabamento]], e `setOpen`
+  para o recorte dos furos nos prédios com [[interior-dos-predios|interior]] montado.
 
 **`textures.js`** — tudo em canvas: fachada 8×8 vãos (cor + emissivo das janelas
 acesas + roughness/metalness numa textura só: G e B), chão com faixas, meio-fio e
@@ -62,6 +63,10 @@ faixas de pedestre, grama, telhado, ondas, letreiro.
 | Triângulos | ~430 mil |
 
 ## Armadilhas
+
+- **Parede de face única e sombra**: por padrão, só a face de trás entra no mapa de sombra, e
+  o miolo do prédio ficava ao sol (o interior saía lavado). As paredes fazem sombra dos dois
+  lados (`shadowSide`) — [[2026-09-28-pr-028-interior-dos-predios]].
 
 - **Cornija com tampa cobre o telhado.** A caixa da cornija tinha face de cima e
   pintava o telhado inteiro de pedra clara — de cima, a cidade inteira parecia

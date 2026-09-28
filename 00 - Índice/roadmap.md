@@ -39,3 +39,16 @@ Escala real, com velocidade proporcional à distância; a carga solar dura minut
 | 16 | Visão de calor carregada atravessa a Terra | ✅ [[2026-09-28-pr-027-visao-atravessa-terra]] |
 
 Fase 2 concluída em 28/09/2026, nos PRs #21 a #27.
+
+## Fase 3 — destruição realista
+
+Pedido de 28/09: prédio cheio por dentro ao atravessar, explosão de verdade, prédios caindo
+de forma realista, e a visão de calor cortando e quebrando prédios. O jogador escolheu:
+supersônico (ou com carga solar) derruba a parte de cima de qualquer prédio, e mais devagar
+cedem só os andares em volta do furo; a explosão tem clarão, fogo e fumaça.
+
+| # | Peça | Estado |
+|---|---|---|
+| 17 | Interior dos prédios: andares, pilares, salas, móveis; furo aberto de verdade | ✅ [[2026-09-28-pr-028-interior-dos-predios]] |
+| 18 | Explosão no impacto e queda realista: tombar, partir no ar, nuvem de poeira | ⬜ |
+| 19 | Visão de calor corta: rasgo em brasa, e o corte de lado a lado derruba | ⬜ |
