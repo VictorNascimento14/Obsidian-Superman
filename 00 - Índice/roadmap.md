@@ -19,5 +19,5 @@ documenta o PR.
 | 6 | HUD e minimapa | ✅ [[2026-09-28-pr-007-hud-e-minimapa]] |
 | 7 | Poderes: visão de calor | ✅ [[2026-09-28-pr-008-visao-de-calor]] |
 | 8 | Tráfego e pedestres | ✅ [[2026-09-28-pr-009-trafego-e-pedestres]] |
-| 9 | Missões: resgate e drones | ⏳ |
+| 9 | Missões: treino, resgate e drones | ✅ [[2026-09-28-pr-010-missoes]] |
 | 10 | Deploy no GitHub Pages (antecipado) | ✅ [[2026-09-28-pr-006-deploy-pages]] |
