@@ -10,6 +10,8 @@ Mapa dos sistemas do jogo. Cada linha vira link quando a nota do sistema nascer.
 
 ## Gameplay (`05 - Gameplay`)
 
+- [[heroi-e-capa]] — modelo, poses e capa simulada
+
 ## Render (`06 - Render`)
 
 - [[pipeline-de-render]] — renderer, céu, luz, sombra, pós e horários
