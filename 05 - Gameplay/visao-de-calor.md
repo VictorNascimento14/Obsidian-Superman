@@ -44,6 +44,10 @@ alvos a `× (1 + 4 × carga)`, e a reserva drena `× (1 − carga)` — cheia, o
 inteiro (`energy.update(dt, wants, drainMul)`). O raio engrossa até 2,2 vezes e passa de
 laranja para branco-dourado. Disparar gasta a carga mais depressa (`SOLAR.beam`).
 
+Com 35% de carga ou mais, o raio que acerta a Terra a atravessa e deixa um buraco na entrada
+e na saída — ver [[atravessar-a-terra]]. Para isso o `update(dt, wants, over)` aceita a
+direção da mira assistida (`over`) no lugar da direção da câmera.
+
 ## Câmera sobre o ombro
 
 Com a câmera centrada, o ponto mirado fica **exatamente atrás do herói**: o corpo
@@ -61,3 +65,4 @@ ver [[ADR-003-origem-flutuante]].
 - [[2026-09-28-pr-008-visao-de-calor]]
 - [[2026-09-28-pr-023-origem-flutuante]] — olho e mira no mesmo espaço
 - [[2026-09-28-pr-026-carga-solar]] — alcance, dano e raio com a carga solar; o Sol paga a reserva
+- [[2026-09-28-pr-027-visao-atravessa-terra]] — a mira assistida guia o raio até a Terra

@@ -36,4 +36,6 @@ Escala real, com velocidade proporcional à distância; a carga solar dura minut
 | 13 | Subir ao espaço e ver a Terra (globo procedural) | ✅ [[2026-09-28-pr-024-espaco-e-terra]] |
 | 14 | Sistema solar: Sol, planetas e marcadores | ✅ [[2026-09-28-pr-025-sistema-solar]] |
 | 15 | Carga solar: o herói fica mais forte perto do Sol | ✅ [[2026-09-28-pr-026-carga-solar]] |
-| 16 | Visão de calor carregada atravessa a Terra | ⬜ |
+| 16 | Visão de calor carregada atravessa a Terra | ✅ [[2026-09-28-pr-027-visao-atravessa-terra]] |
+
+Fase 2 concluída em 28/09/2026, nos PRs #21 a #27.

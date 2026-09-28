@@ -19,6 +19,7 @@ Mapa dos sistemas do jogo. Cada linha vira link quando a nota do sistema nascer.
 - [[destruicao]] — atravessar prédios (furos, entulho, poeira) e desabamento
 - [[espaco]] — espaço e sistema solar em escala real: hipervelocidade pelo corpo mais perto, a Terra procedural, o Sol, a Lua e os planetas, marcadores
 - [[carga-solar]] — perto do Sol o herói carrega: voo 2,5×, força 3× contra prédio, visão de calor 6× mais longe, aura dourada
+- [[atravessar-a-terra]] — a visão de calor carregada atravessa o planeta: mira assistida, corda pela esfera, buracos em brasa na entrada e na saída
 
 ## Render (`06 - Render`)
 

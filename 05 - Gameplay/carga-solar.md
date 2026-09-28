@@ -21,8 +21,8 @@ Perto do Sol o herói se enche de energia (a barra dourada **CARGA SOLAR**). Car
   reserva, com o raio mais grosso e branco-dourado;
 - brilha: a silhueta irradia dourado, dentro de um halo.
 
-A carga dura minutos longe do Sol (escolha do jogador). É a condição da peça 16: a visão de
-calor carregada atravessa a Terra.
+A carga dura minutos longe do Sol (escolha do jogador). Com 35% ou mais, a visão de calor
+carregada atravessa a Terra — ver [[atravessar-a-terra]].
 
 ## Como funciona
 
@@ -81,3 +81,4 @@ de 40 m; carregado, entrando a 375 m/s, sobram 85%.
 ## PRs
 
 - [[2026-09-28-pr-026-carga-solar]]
+- [[2026-09-28-pr-027-visao-atravessa-terra]] — o que a carga libera: atravessar a Terra

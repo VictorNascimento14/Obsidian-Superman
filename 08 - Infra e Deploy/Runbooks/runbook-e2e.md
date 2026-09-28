@@ -41,6 +41,12 @@ npm run e2e
     ([[2026-09-28-pr-026-carga-solar]]). Screenshots em `e2e-out/carga.png` e
     `e2e-out/carga-desabar.png`. O `__launch(maxWidth, speed, minWidth)` só escolhe prédio
     sem desabar e sem dano na altura do voo.
+12. Cenário **atravessar a Terra**: do Sol, com a mira da câmera 1,5° ao lado da Terra (a
+    assistência leva ao centro), 2,5 s de disparo têm de abrir um buraco de 100 km ou mais
+    com a saída nos antípodas (entrada · saída < −0,99). Mirando Metrópolis de cima, nenhum
+    buraco novo ([[2026-09-28-pr-027-visao-atravessa-terra]]). Screenshots em
+    `e2e-out/atravessa-sol.png` e `e2e-out/buraco-saida.png`. A mira é corrigida pela
+    direção da câmera (`__aimCam`), não pelo rumo do herói.
 
 Referência de 28/09/2026: 3 missões em **81 s**, 921 pontos.
 

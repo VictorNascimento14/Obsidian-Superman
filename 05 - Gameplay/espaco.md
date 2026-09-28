@@ -125,6 +125,10 @@ Distância legível: km até 1 milhão, depois "149,6 milhões de km", "4,5 bilh
 **Luz do herói**: no espaço, a luz direcional é o Sol visto de onde o herói está, e some na
 sombra da Terra (ou de qualquer corpo entre ele e o Sol).
 
+**Buracos e o raio que atravessa**: o globo desenha os buracos da visão de calor carregada
+(`setHoles`), e a cena do espaço desenha o raio de ponta a ponta (`setBeam`) — ver
+[[atravessar-a-terra]].
+
 **A hora do dia** (T) gira o sistema inteiro em volta da Terra. Longe dela (além de
 100.000 km), T não muda nada: tiraria o planeta de perto do herói.
 
@@ -191,3 +195,4 @@ A velocidade máxima no caminho para Netuno passa de 6.000 vezes a da luz.
 - [[2026-09-28-pr-024-espaco-e-terra]]
 - [[2026-09-28-pr-025-sistema-solar]] — Sol, Lua e planetas, corpo mais perto, espaço
   escalado em log, marcadores
+- [[2026-09-28-pr-027-visao-atravessa-terra]] — buracos no globo e o raio na cena do espaço
