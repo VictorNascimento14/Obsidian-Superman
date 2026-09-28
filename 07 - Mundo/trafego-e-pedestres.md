@@ -46,9 +46,11 @@ dentro da calçada, andando a 1,1–1,7 m/s em um dos dois sentidos.
 | Draw calls extras | 3 (+1 da sombra dos carros) |
 | Triângulos no quadro com sombra | ~800 mil (de ~440 mil) |
 
-⚠️ O salto de triângulos é a próxima coisa a olhar num PR de desempenho (LOD ou
-esconder pedestres longe).
+✅ Resolvido no [[2026-09-28-pr-013-recorte-e-agua]]: **recorte por distância** —
+carros até 900 m e pedestres até 300 m da câmera, compactados no começo do buffer.
+~30% menos triângulos por quadro.
 
 ## PRs
 
 - [[2026-09-28-pr-009-trafego-e-pedestres]]
+- [[2026-09-28-pr-013-recorte-e-agua]]
