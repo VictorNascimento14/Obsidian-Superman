@@ -59,6 +59,11 @@ longe da cidade ([[ADR-003-origem-flutuante]]).
 | Arrasto | 3 + 0,12·v (v ≤ 60) | capa mais "dura" quanto mais rápido |
 | Colisão | cápsula pélvis–peito, r = 0,26 m | a capa não atravessa as costas |
 | Reset | pino saltou > 30 m | teleporte não estica a capa pela cidade |
+| Aura da carga solar | borda `pow(1 − n·v, 4)` no emissivo + halo de 3,4 m | a silhueta acende e o traje mantém a cor |
+
+**Carga solar** (`setCharge(k, t)`): os materiais do corpo e da capa ganham, por
+`onBeforeCompile`, um brilho de borda (fresnel) no emissivo, e um halo aditivo pulsa em volta.
+Com carga zero, nada muda — ver [[carga-solar]].
 
 ## Armadilhas
 
@@ -77,3 +82,4 @@ longe da cidade ([[ADR-003-origem-flutuante]]).
 - [[2026-09-28-pr-004-heroi-e-capa]]
 - [[2026-09-28-pr-020-alocacoes-loop-quente]] — capa sem alocar por quadro
 - [[2026-09-28-pr-023-origem-flutuante]] — vértices relativos ao mesh
+- [[2026-09-28-pr-026-carga-solar]] — aura dourada da carga solar

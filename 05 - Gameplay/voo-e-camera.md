@@ -51,6 +51,8 @@ teclas **e** botões do mouse; Espaço só arma o pulo com o ponteiro travado.
   `max(20 km, 1% do raio)` nos outros corpos: ver [[espaco]].
 - **Atravessar prédio**: voando, ≥ 30 m/s para dentro da parede fura em vez de parar — ver
   [[destruicao]]. Sem pouso enquanto estiver dentro de um prédio.
+- **Carga solar** (`flight.charge`): cruzeiro, boost, supersônico e o teto no mundo plano ×
+  `1 + 1,5 × carga` (2,5 vezes cheia); contra prédio, a força triplica — ver [[carga-solar]].
 - **Pouso**: tocou chão/telhado a menos de 18 m/s, sem subir → `ground`.
   Andar para fora da beirada volta para `air` (não cai).
 - **Eventos**: `takeoff`, `land`, `supersonic`, `sonicboom` (cruzou 340 m/s — anel
@@ -92,3 +94,4 @@ teclas **e** botões do mouse; Espaço só arma o pulo com o ponteiro travado.
 - [[2026-09-28-pr-023-origem-flutuante]] — câmera filha do mundo
 - [[2026-09-28-pr-024-espaco-e-terra]] — hipervelocidade, teto e piso no espaço
 - [[2026-09-28-pr-025-sistema-solar]] — o corpo mais perto comanda; piso de cada corpo
+- [[2026-09-28-pr-026-carga-solar]] — velocidade e força com a carga solar

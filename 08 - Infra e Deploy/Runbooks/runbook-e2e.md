@@ -35,6 +35,12 @@ npm run e2e
     100.000 km da superfície dele em 45 s (leva ~15 s); depois uma foto de Saturno de perto
     ([[2026-09-28-pr-025-sistema-solar]]). Screenshots em `e2e-out/sol.png` e
     `e2e-out/saturno.png`.
+11. Cenário **carga solar**: a 80.000 km da superfície do Sol, a carga tem de encher em
+    20 s; de volta à cidade (ainda ≥ 90%), a 150 m/s contra um prédio intacto de 24–34 m, ele
+    tem de cair de uma vez — sem carga, o mesmo golpe só o furaria
+    ([[2026-09-28-pr-026-carga-solar]]). Screenshots em `e2e-out/carga.png` e
+    `e2e-out/carga-desabar.png`. O `__launch(maxWidth, speed, minWidth)` só escolhe prédio
+    sem desabar e sem dano na altura do voo.
 
 Referência de 28/09/2026: 3 missões em **81 s**, 921 pontos.
 

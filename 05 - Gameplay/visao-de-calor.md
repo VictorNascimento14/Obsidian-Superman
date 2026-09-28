@@ -37,6 +37,13 @@ tags: [sistema, poderes, visao-de-calor]
 A trava existe para o zero não virar pisca-pisca (liga, drena, desliga, recarrega um
 quadro, liga…).
 
+## Carregada de Sol
+
+Com a [[carga-solar]], o alcance vai a `700 m × (1 + 5 × carga)` (4,2 km cheia), o dano nos
+alvos a `× (1 + 4 × carga)`, e a reserva drena `× (1 − carga)` — cheia, o Sol paga o disparo
+inteiro (`energy.update(dt, wants, drainMul)`). O raio engrossa até 2,2 vezes e passa de
+laranja para branco-dourado. Disparar gasta a carga mais depressa (`SOLAR.beam`).
+
 ## Câmera sobre o ombro
 
 Com a câmera centrada, o ponto mirado fica **exatamente atrás do herói**: o corpo
@@ -53,3 +60,4 @@ ver [[ADR-003-origem-flutuante]].
 
 - [[2026-09-28-pr-008-visao-de-calor]]
 - [[2026-09-28-pr-023-origem-flutuante]] — olho e mira no mesmo espaço
+- [[2026-09-28-pr-026-carga-solar]] — alcance, dano e raio com a carga solar; o Sol paga a reserva

@@ -37,6 +37,12 @@ tags: [sistema, hud, ui]
 - **Zoom pela velocidade** (3,2× parado → 1× a 300 m/s).
 - **Marcadores fora do círculo** ficam presos na borda, na direção certa.
 
+## Carga solar
+
+`setSolar(k)`: a barra dourada **CARGA SOLAR 87%** logo acima da energia da visão de calor,
+só visível com carga. Os avisos **CARGA SOLAR MÁXIMA** e **CARGA SOLAR ESGOTADA** saem pelo
+`toast` — ver [[carga-solar]].
+
 ## No espaço
 
 Acima de 20 km: altitude até a superfície da Terra (perto de outro corpo, "JÚPITER a 700 km"),
@@ -52,3 +58,4 @@ milhão, depois "149,6 milhões de km" e "4,5 bilhões de km"; o objetivo das mi
 - [[2026-09-28-pr-007-hud-e-minimapa]]
 - [[2026-09-28-pr-024-espaco-e-terra]] — altitude, km/s e marcadores no espaço
 - [[2026-09-28-pr-025-sistema-solar]] — marcadores de todos os corpos, corpo mais perto, milhões e bilhões de km
+- [[2026-09-28-pr-026-carga-solar]] — barra dourada CARGA SOLAR

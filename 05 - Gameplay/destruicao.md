@@ -99,6 +99,10 @@ para a GPU (`addUpdateRange`).
 | Queda | 7 m/s² efetivos, tombando até ~8° | Mais lenta que queda livre: os andares freiam |
 | Dano para desabar | 50% de uma faixa de 8 m | Supersônico derruba prédio estreito de uma vez |
 | Toco | 3 m | O térreo fica, com escombros |
+| Carga solar | `might = 1 + 2 × carga` | Fachada e metros freiam `might` vezes menos; o dano usa `force = v × might` |
+
+Com a [[carga-solar]] cheia, a 150 m/s um prédio de 24–34 m cai de uma vez (sem carga, o
+mesmo golpe tira ~0,3 da faixa e só fura). A velocidade para furar continua 30 m/s.
 
 ## Armadilhas
 
@@ -122,3 +126,4 @@ para a GPU (`addUpdateRange`).
 
 - [[2026-09-28-pr-021-atravessar-predios]]
 - [[2026-09-28-pr-022-desabamento]]
+- [[2026-09-28-pr-026-carga-solar]] — força e freio com a carga solar
