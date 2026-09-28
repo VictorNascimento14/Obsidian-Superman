@@ -40,7 +40,9 @@ teclas **e** botões do mouse; Espaço só arma o pulo com o ponteiro travado.
   quanto mais rápido, mais inércia.
 - **Pairar**: sem comando, a velocidade cai por `e^(−2,8·dt)` — ele freia sozinho.
 - **Colisão subdividida**: o passo é quebrado em pedaços de ≤ 0,8 m (máx. 60) e a
-  componente da velocidade que entra na superfície é removida (desliza na parede).
+  componente da velocidade que entra em **cada** superfície tocada é removida, uma de
+  cada vez (desliza na parede). Cortar contra a soma das normais (chão + parede = uma
+  diagonal) lançava o herói parede acima ao bater rente à rua.
   Impacto acima de 70 m/s vira evento → tremor de câmera.
 - **Pouso**: tocou chão/telhado a menos de 18 m/s, sem subir → `ground`.
   Andar para fora da beirada volta para `air` (não cai).
@@ -56,7 +58,9 @@ teclas **e** botões do mouse; Espaço só arma o pulo com o ponteiro travado.
   qualquer atraso deixa o herói fora do quadro. Só distância, FOV e tremor suavizam.
 - Distância 5 m no chão, 6,5 → 9 m no ar conforme a velocidade; **altura sobe**
   (+1,2 → +4,4 m) e o **FOV abre** (62° → 76°).
-- Raio do herói até a câmera: se bate em prédio, a câmera encurta em vez de atravessar.
+- Raio **do herói** (não do ombro) até a câmera: se bate em prédio, a câmera encurta em
+  vez de atravessar. Saindo do ombro, encostado numa parede à direita, o raio nascia
+  dentro do prédio — e o raycast ignora a caixa que contém a origem.
 
 ## Armadilhas
 
@@ -72,3 +76,4 @@ teclas **e** botões do mouse; Espaço só arma o pulo com o ponteiro travado.
 
 - [[2026-09-28-pr-005-voo-e-camera]]
 - [[2026-09-28-pr-016-pausa-e-pointer-lock]] — despausar só com o lock confirmado
+- [[2026-09-28-pr-017-voo-colisao-e-camera]] — corte por superfície; câmera traça do herói

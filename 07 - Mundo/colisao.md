@@ -14,7 +14,7 @@ Responde três perguntas sobre o mundo, sem three e sem alocar no caminho quente
 
 | Função | Pergunta | Quem usa |
 |---|---|---|
-| `resolveSphere(p, r, outNormal)` | O herói (esfera) está dentro de algo? Empurra para fora. | voo |
+| `resolveSphere(p, r, outNormal, onContact?)` | O herói (esfera) está dentro de algo? Empurra para fora; `onContact` recebe cada normal. | voo |
 | `raycast(o, dir, max, out)` | Onde um raio acerta primeiro (prédio ou chão)? | visão de calor, câmera |
 | `heightAt(x, z)` | Qual o telhado mais alto sob este ponto? | pouso, missões |
 
@@ -32,7 +32,13 @@ Responde três perguntas sobre o mundo, sem three e sem alocar no caminho quente
 
 - A esfera **não pode andar mais que o próprio raio por passo** sem risco de túnel
   em parede fina; o voo em supervelocidade precisa subdividir o passo.
+- **Soma de normais não serve para cortar velocidade**: chão (0,1,0) + parede (1,0,0)
+  normalizados dão a diagonal, e o corte vira subida. Quem corta velocidade usa
+  `onContact`, uma normal por vez ([[2026-09-28-pr-017-voo-colisao-e-camera]]).
+- **O raycast ignora a caixa que contém a origem** (teste de slab): o raio tem de nascer
+  fora dos prédios. A câmera traça do herói, não do ombro.
 
 ## PRs
 
 - [[2026-09-28-pr-003-cidade-procedural]]
+- [[2026-09-28-pr-017-voo-colisao-e-camera]] — normal por contato (`onContact`)
