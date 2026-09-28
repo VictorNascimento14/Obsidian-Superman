@@ -38,7 +38,9 @@ semente, mesma cidade, sempre — coberto por teste.
   mesh, cornijas noutro. UV em metros de fachada: janela tem o mesmo tamanho em
   qualquer prédio. **Tom por prédio em vertex color** multiplica a textura.
 - Chão: uma laje de 4 m (a borda vira o cais) com a textura de rua repetida por
-  célula. Água em volta com normal map procedural animado.
+  célula. Água em volta com normal map procedural animado. Margem do cais, nível da
+  água e altura do gramado vêm de `layout.js` (`QUAY`, `WATER_Y`, `LAWN`) — os mesmos
+  da [[colisao]].
 - Instanciados: ~700 árvores, 1.764 postes, caixas d'água, condensadoras, antenas
   com luz de aviso piscando.
 - `update(dt, time, night)` acende janelas, postes e letreiro conforme `night` do
