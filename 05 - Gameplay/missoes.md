@@ -46,6 +46,8 @@ topo durante o respiro.
 - Drones: 5 em órbita num cruzamento, a 45–85 m de altura, o olho vermelho seguindo o
   herói; registrados em `heatVision.targets`; explodem ao morrer.
 - **Pilar de luz** de 700 m na cor da missão, e marcadores no [[hud-e-minimapa]].
+- **Fim de missão** descarta geometria e material de tudo que ela criou (`disposeTree`);
+  o `ringGeo` é compartilhado e fica — ver [[remover-da-cena-nao-libera-gpu]].
 
 ## Verificação de ponta a ponta
 
@@ -55,3 +57,4 @@ As três foram **concluídas por autopiloto no navegador headless** — ver
 ## PRs
 
 - [[2026-09-28-pr-010-missoes]]
+- [[2026-09-28-pr-014-revisao-de-codigo]] — dispose no fim da missão

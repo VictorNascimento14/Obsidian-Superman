@@ -48,9 +48,12 @@ dentro da calçada, andando a 1,1–1,7 m/s em um dos dois sentidos.
 
 ✅ Resolvido no [[2026-09-28-pr-013-recorte-e-agua]]: **recorte por distância** —
 carros até 900 m e pedestres até 300 m da câmera, compactados no começo do buffer.
-~30% menos triângulos por quadro.
+~30% menos triângulos por quadro. A cor é copiada com `setColorAt(n, col.fromArray(...))`
+— sem `subarray`, que criava uma view por instância visível a cada quadro
+([[2026-09-28-pr-014-revisao-de-codigo]]).
 
 ## PRs
 
 - [[2026-09-28-pr-009-trafego-e-pedestres]]
 - [[2026-09-28-pr-013-recorte-e-agua]]
+- [[2026-09-28-pr-014-revisao-de-codigo]] — cor do recorte sem alocar

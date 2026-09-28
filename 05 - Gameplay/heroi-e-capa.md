@@ -17,7 +17,8 @@ uma capa simulada como pano.
 
 ## Como funciona
 
-**Rig** (`hero.js`) — origem na pélvis; em pé, a sola fica `FOOT_DEPTH` (1,04 m)
+**Rig** (`hero.js`) — origem na pélvis; em pé, a sola fica `FLIGHT.footDepth` (1,04 m,
+definido em `flight.js`: a física é lógica pura e não importa o modelo — ADR-001)
 abaixo. Corpo olha para +z, cabeça para +y. Juntas são `Object3D`: pélvis → coluna →
 peito → pescoço → cabeça; ombro → cotovelo → mão; quadril → joelho → tornozelo.
 Escala 1,1 → ~1,9 m.

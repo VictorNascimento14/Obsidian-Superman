@@ -27,7 +27,7 @@ Ctrl ficou de fora de propósito: Ctrl+W fecha a aba.
 
 ## Como funciona (`flight.js`, testado)
 
-- **Duas fases**: `ground` (anda relativo ao yaw, sola a `FOOT_DEPTH` do telhado) e
+- **Duas fases**: `ground` (anda relativo ao yaw, sola a `FLIGHT.footDepth` do telhado) e
   `air` (sem gravidade — é o Superman).
 - **Três marchas**: cruzeiro 48 m/s, boost 150, supersônico 420. A velocidade
   **persegue** o alvo por `lerp` exponencial com taxa por marcha (2,2 / 1,4 / 0,9 1/s):

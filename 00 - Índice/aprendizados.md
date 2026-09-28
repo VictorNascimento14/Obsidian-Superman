@@ -9,6 +9,7 @@ tags: [moc, aprendizado]
 Bugs instrutivos e armadilhas, do mais recente para o mais antigo.
 
 - [[fps-headless-nao-mede-ganho]] — declare o trabalho removido (triângulos), não o FPS do headless
+- [[remover-da-cena-nao-libera-gpu]] — `scene.remove` não descarta geometria/material; meça o patamar de `renderer.info.memory`
 
 - [[verificacao-ponta-a-ponta-por-autopiloto]] — autopiloto no navegador prova que a missão é cumprível
 
