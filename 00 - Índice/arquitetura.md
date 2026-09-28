@@ -11,6 +11,7 @@ Mapa dos sistemas do jogo. Cada linha vira link quando a nota do sistema nascer.
 ## Gameplay (`05 - Gameplay`)
 
 - [[heroi-e-capa]] — modelo, poses e capa simulada
+- [[voo-e-camera]] — física de voo, controles e câmera
 
 ## Render (`06 - Render`)
 

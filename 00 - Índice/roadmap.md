@@ -15,7 +15,7 @@ documenta o PR.
 | 2 | Render: renderer, céu, luz, sombras, pós | ✅ [[2026-09-28-pr-002-pipeline-de-render]] |
 | 3 | Mundo: layout procedural e prédios instanciados | ✅ [[2026-09-28-pr-003-cidade-procedural]] |
 | 4 | Herói: modelo procedural + capa simulada | ✅ [[2026-09-28-pr-004-heroi-e-capa]] |
-| 5 | Voo: física, input, câmera, colisão | ⏳ |
+| 5 | Voo: física, input, câmera, colisão | ✅ [[2026-09-28-pr-005-voo-e-camera]] |
 | 6 | HUD e minimapa | ⏳ |
 | 7 | Poderes: visão de calor | ⏳ |
 | 8 | Tráfego e pedestres | ⏳ |
